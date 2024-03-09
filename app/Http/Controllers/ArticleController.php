@@ -16,8 +16,8 @@ class ArticleController extends Controller
     {
         $articles=Article::when(request()->has('keyword'),function($query){
             $keyword=request()->keyword;
-            $query->where("title","like","%".$keyword."%");
-            $query->where("description","like","%".$keyword."%");
+             $query->where("title","like","%".$keyword."%");
+            $query->orWhere("description","like","%".$keyword."%");
 
         })->when(request()->has('name'),function($query){
             $sortType=request()->name ??"asc";

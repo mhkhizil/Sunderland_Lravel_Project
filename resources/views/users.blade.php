@@ -3,13 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Articles </h2>
+                <h2>User lists </h2>
                 <hr>
-                <div class="  row justify-content-between mb-3">
+                {{-- create button --}}
+                {{-- <div class="  row justify-content-between mb-3">
                     <div class=" col-md-3">
                         <a href="{{ route('article.create') }}" class=" btn btn-outline-primary">Create</a>
-                    </div>
-                    <div class="  col-md-5">
+                    </div> --}}
+                    {{-- search ui --}}
+                    {{-- <div class="  col-md-5">
                         <form action="{{ route('article.index') }}" method="GET">
                             <div class=" input-group ">
                                 <input type="text" class=" form-control" name="keyword"
@@ -22,35 +24,41 @@
                                 <button class=" btn btn-primary">Search</button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
                 <table class=" table table-borderless">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Title
-                                <a class=" " href="{{ route("article.index", ['name' => 'asc']) }}"><i class="bi bi-sort-alpha-down"></i></a>
+                            <th>Information
+                                {{-- sort ui --}}
+                                {{-- <a class=" " href="{{ route("article.index", ['name' => 'asc']) }}"><i class="bi bi-sort-alpha-down"></i></a>
                                 <a class="  "
                                     href="{{ route("article.index", ['name' => 'desc']) }}"><i class="bi bi-sort-alpha-down-alt"></i></a>
-                                <a class=" " href="{{ route("article.index") }}"><i class="bi bi-x-lg"></i></a>
+                                <a class=" " href="{{ route("article.index") }}"><i class="bi bi-x-lg"></i></a> --}}
                             </th>
-                            <th>Description</th>
-                            <th>Owner</th>
-                            <th>Control</th>
+
+
+                            {{-- <th>Control</th> --}}
                             <th>Updated at</th>
                             <th>Created at</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($articles as $article)
+                        @forelse ($users as $user)
                             <tr>
-                                <td>{{ $article->id }}</td>
-                                <td>{{ $article->title }}</td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}
+                                <br>
+                                <span class=" small   text-black-50">
+                                    {{ $user->email }}
+                                </span>
+                                </td>
 
-                                <td>{{ Str::limit($article->description, 20) }}</td>
-                                <td>{{ $article->user_id }}</td>
-                                <td>
+
+                                {{-- control actions --}}
+                                {{-- <td>
                                     <div class=" btn-group">
                                         <a class=" btn btn-sm  btn-outline-info"
                                             href="{{ route('article.show', $article->id) }}">
@@ -67,25 +75,25 @@
                                         @csrf
 
                                     </form>
+                                </td> --}}
+                                <td>
+                                    <p class=" mb-0 small">
+                                        <i class=" bi bi-calendar"></i>
+                                        {{ $user->updated_at->format('d M Y') }}
+                                    </p>
+                                    <p class=" mb-0 small">
+                                        <i class=" bi bi-clock"></i>
+                                        {{ $user->updated_at->format('h:i a') }}
+                                    </p>
                                 </td>
                                 <td>
                                     <p class=" mb-0 small">
                                         <i class=" bi bi-calendar"></i>
-                                        {{ $article->updated_at->format('d M Y') }}
+                                        {{ $user->created_at->format('d M Y') }}
                                     </p>
                                     <p class=" mb-0 small">
                                         <i class=" bi bi-clock"></i>
-                                        {{ $article->updated_at->format('h:i a') }}
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class=" mb-0 small">
-                                        <i class=" bi bi-calendar"></i>
-                                        {{ $article->created_at->format('d M Y') }}
-                                    </p>
-                                    <p class=" mb-0 small">
-                                        <i class=" bi bi-clock"></i>
-                                        {{ $article->created_at->format('h:i a') }}
+                                        {{ $user->created_at->format('h:i a') }}
                                     </p>
                                 </td>
                             </tr>
