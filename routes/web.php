@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CaptchaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::middleware("auth")->prefix("dashboard")->group(function(){
     Route::resource('article', ArticleController::class);
 });
 
+
+Route::get('/reload-captcha', [CaptchaController::class, 'reloadCaptcha']);
