@@ -35,4 +35,4 @@ Disclaimer:
 
 This code is provided for educational purposes only.
 
-Note : if you have any difficulty unzipping my project pleae kindly check and this link on github and clone it for better experience :
+Note : if you have any difficulty unzipping my project pleae kindly check and this link on github and clone it for better experience : https://github.com/mhkhizil/Sunderland_Lravel_Project. Hope you follow me with all due respect
