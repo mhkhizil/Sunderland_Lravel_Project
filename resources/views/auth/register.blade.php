@@ -52,10 +52,10 @@
                                     class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password"required
+                                    <input oninput="passwordStrength()" id="password" type="password"required
                                         class="form-control @error('password') is-invalid @enderror" name="password"
                                          autocomplete="new-password">
-
+                                         <span class=" text-danger" id="passwordDescription"></span>
                                     @error('password')
 
                                         <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                             <div class="row mb-3 ms-1 form-group">
 
                                 <div class="col-md-6 captcha">
-                                    <span class=" ms-5 ">{!! captcha_img('math') !!}</span>
+                                    <span class=" ms-5 ">{!! captcha_img('flat') !!}</span>
                                     <button type="button" class=" btn btn-danger reload" id="reload"> &#x21bb;</button>
                                 </div>
                                 <div class="col-md-4">
@@ -123,3 +123,31 @@
         });
     });
 </script>
+<script >
+    function passwordStrength(password)
+    {
+        var password = document.getElementById("password").value;
+      var desc = new Array();
+      desc[0] = "";
+      desc[1] = "Weakest";
+      desc[2] = "Weak";
+      desc[3] = "Better";
+      desc[4] = "Medium";
+      desc[5] = "Strong";
+      desc[6] = "Strongest";
+      var score   = 0;
+      if (password.length >= 1)score++;
+      //if password bigger than 6 give 1 point
+      if (password.length > 6) score++;
+      //if password has both lower and uppercase characters give 1 point
+      if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;
+      //if password has at least one number give 1 point
+      if (password.match(/\d+/)) score++;
+      //if password has at least one special caracther give 1 point
+      if ( password.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) ) score++;
+      //if password bigger than 12 give another 1 point
+      if (password.length > 12) score++;
+       document.getElementById("passwordDescription").innerHTML = desc[score];
+
+    }
+    </script>
