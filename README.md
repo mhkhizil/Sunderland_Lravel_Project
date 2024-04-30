@@ -5,20 +5,25 @@ Prerequisites:
 
 PHP (8.2.0)
 Laravel (10.47.0)
-Composer
+Composer visit -https://getcomposer.org/doc/00-intro.md
 Node.js and npm (or yarn)-npm is prefereable
-Installation:
-Clone this repository or unzip the file .
+----------
+Installation when cloned from git repo:
+Clone this repository  .
 Run composer install to install Laravel dependencies.
 Run npm install (or yarn install) to install frontend dependencies.
 Generate an application key: php artisan key:generate and insert it in .env file
 Configure your database connection details in .env file.
 Migrate the database tables: php artisan migrate
-
+----------
+installition when extracting zipped file :
+Migrate the database tables: php artisan migrate
+----------
 Running the Application:
 
-Start the development server: php artisan serve on one termiinal and on other run  npm run dev for Vite-specific development server
+Start the development server: php artisan serve on one termiinal and on other run npm run dev for Vite-specific development server
 Access the application in your browser: http://localhost:8000 (default port)
+--------------
 Features:
 User registration with email
 Secure password hashing using Laravel's bcrypt
@@ -32,7 +37,6 @@ CSRF Protection: Laravel provides built-in CSRF protection. Ensure forms include
 Input Validation: Validated all user input to prevent SQL injection and other vulnerabilities.
 Refer to Laravel documentation for detailed configuration options: https://laravel.com/docs/11.x/readme.
 Disclaimer:
-
 This code is provided for educational purposes only.
 
 Note : if you have any difficulty unzipping my project pleae kindly check and this link on github and clone it for better experience : https://github.com/mhkhizil/Sunderland_Lravel_Project. Hope you follow me with all due respect
