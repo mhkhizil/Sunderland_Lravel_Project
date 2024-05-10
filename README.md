@@ -1,35 +1,51 @@
 Laravel-Vite Login and Registration System
 This project implements a secure login and registration system using Laravel and Vite. It offers a user-friendly interface and adheres to security best practices.
 
+**_You need to have php,composer,node.js and npm in your computer to run this file_**
 Prerequisites:
 
-PHP (8.2.0)
-Laravel (10.47.0)
-Composer visit -https://getcomposer.org/doc/00-intro.md
-Node.js and npm (or yarn)-npm is prefereable
+1.PHP (8.2.0)
+
+2.Composer visit -https://getcomposer.org/doc/00-intro.md
+
+3.Node.js(v20.11.0) and npm (10.2.4) (or yarn)-npm is prefereable
+
+4.Laravel (10.47.0)
 
 ---
 
-Installation when cloned from git repo:
-Clone this repository .
-Run composer install to install Laravel dependencies.
-Run npm install (or yarn install) to install frontend dependencies.
-Generate an application key: php artisan key:generate and insert it in .env file
-Configure your database connection details in .env file.
-Migrate the database tables: php artisan migrate
+**_Installation when cloned from git repo_**
 
----
+1.Clone this repository -"https://github.com/mhkhizil/Sunderland_Lravel_Project.git"
 
-installation when extracting zipped file(extracting using 7Zip is preferable because you can face "error 0x80010135 " because my folder name and file names are very long if you encounter that error use 7zip or extract the fie on root folder) :
-Migrate the database tables: php artisan migrate
-Since your computer does not have the database i inserted in .env file ,it will ask whether you would like to create that db then type yes in your terminal and it will create the db
+2.Run composer install to install Laravel dependencies.
 
----
+3.Run npm install (or yarn install) to install frontend dependencies.
 
-Running the Application:
+4.Generate an application key: php artisan key:generate and insert it in .env file
 
-Start the development server: php artisan serve on one terminal that will give out this link to access the application like this 'http://localhost:8000 (default port)' and on other run npm run dev for Vite-specific development server
-Access the application in your browser by clicking the link that php artisan serve give out:eg. http://localhost:8000 (default port)
+5.Configure your database connection details in .env file.
+
+6.Migrate the database tables: php artisan migrate
+
+-----------------
+
+**_Installation when extracting zipped file(extracting using 7Zip is preferable because you can face "error 0x80010135 " because my folder name and file names are  long if you encounter that error use 7zip ) _**
+
+1.Please make sure to extract the zip file on root folder eg.(C:,D: etc) because npm or yarn can get conflicted in nested folders
+
+2.Migrate the database tables using "php artisan migrate"
+
+3. Since your computer does not have the database i inserted in .env file ,it will ask whether you would like to create that db then type yes in your terminal and it will create the db
+
+------------------------
+
+**_Running the Application_**
+
+1. Enter folder "239714387-code(Part-1)" and inside that folder open 2 terminals
+2.Start the development server: "php artisan serve" on one terminal that will give out this link to access the application like this 'http://localhost:8000 (default port)' and on another terminal run "npm run dev" for Vite-specific development server (if you encounter this kind of error "failed to load config from....,Error: ENOENT: no such file or directory," please move the project folder to the root directory and re-type "npm run dev" again because sometime npm can get conflicted)
+
+2.Access the application in your browser by clicking the link that php artisan serve give out:eg. http://localhost:8000 (default port)
 
 ---
 
@@ -48,4 +64,4 @@ Refer to Laravel documentation for detailed configuration options: https://larav
 Disclaimer:
 This code is provided for educational purposes only.
 
-Note : if you have any difficulty unzipping my project pleae kindly check and this link on github and clone it for better experience : https://github.com/mhkhizil/Sunderland_Lravel_Project. Hope you follow me with all due respect
+Note : if you have any difficulty unzipping my project please kindly check out this link on github and clone it for better experience : https://github.com/mhkhizil/Sunderland_Lravel_Project. Hope you follow me with all due respect
