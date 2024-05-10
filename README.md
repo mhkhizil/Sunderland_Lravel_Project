@@ -1,6 +1,8 @@
 Laravel-Vite Login and Registration System
 This project implements a secure login and registration system using Laravel and Vite. It offers a user-friendly interface and adheres to security best practices.
 
+---
+
 **_You need to have php,composer,node.js and npm in your computer to run this file_**
 Prerequisites:
 
@@ -21,6 +23,9 @@ Prerequisites:
 A.extension=pdo_mysql
 B.extension=openssl
 C.extension=fileinfo
+D.extension=curl
+E.extension=gd
+F.extension=mbstring
 
 **_Installation when cloned from git repo_**
 
