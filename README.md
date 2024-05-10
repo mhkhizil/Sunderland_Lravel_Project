@@ -6,9 +6,9 @@ This project implements a secure login and registration system using Laravel and
 **_You need to have php,composer,node.js and npm in your computer to run this file_**
 Prerequisites:
 
-1.PHP (8.2.0)-ensure that in your enviroment variable there is path for php (check using php --version if php is in your computer)
+1.PHP (8.2.0)-ensure that in your enviroment variable there is path for php (check using php --version if php is in your computer)(using choclatey package manager to install php is recommended)
 
-2.Composer visit -https://getcomposer.org/doc/00-intro.md check composer using (composer --version)
+2.Composer(2.6.6) visit -https://getcomposer.org/doc/00-intro.md check composer using (composer --version)
 
 3.Node.js(v20.11.0) and npm (10.2.4) (or yarn)-npm is prefereable check them using (npm --version and node --version)
 
@@ -17,7 +17,7 @@ Prerequisites:
 ---
 
 **_php.ini file configuration _**
-1.Enter "php --ini"
+1.After installing things mentioned above Enter "php --ini" in your terminal and it will show you a path for php.ini file.Follow that path
 
 2.Enter "php.ini" file with vs code and uncomment these if they are commented -
 A.extension=pdo_mysql
@@ -26,8 +26,10 @@ C.extension=fileinfo
 D.extension=curl
 E.extension=gd
 F.extension=mbstring
+save the changes then exit !
 
-**_Installation when cloned from git repo_**
+Then after that you have two option to open this project-option1 cloning from git repo and option 2 extracting my zipped file
+**_Option1 :Installation by cloned from git repo_**
 
 1.Clone this repository -"https://github.com/mhkhizil/Sunderland_Lravel_Project.git"
 
@@ -43,7 +45,7 @@ F.extension=mbstring
 
 ---
 
-**_Installation when extracting zipped file(extracting using 7Zip is preferable because you can face "error 0x80010135 " because my folder name and file names are long if you encounter that error use 7zip ) _**
+**Option 2:_Installation when extracting zipped file(extracting using 7Zip is preferable because you can face "error 0x80010135 " because my folder name and file names are long if you encounter that error use 7zip ) _**
 
 1.Please make sure to extract the zip file on root folder eg.(C:,D: etc) because npm or yarn can get conflicted in nested folders
 
@@ -56,7 +58,8 @@ F.extension=mbstring
 **_Running the Application_**
 
 1. Enter folder "239714387-code(Part-1)" and inside that folder open 2 terminals
-   2.Start the development server: "php artisan serve" on one terminal that will give out this link to access the application like this 'http://localhost:8000 (default port)' and on another terminal run "npm run dev" for Vite-specific development server (if you encounter this kind of error "failed to load config from....,Error: ENOENT: no such file or directory," please move the project folder to the root directory and re-type "npm run dev" again because sometime npm can get conflicted)
+
+2.Start the development server: "php artisan serve" on one terminal that will give out this link to access the application like this 'http://localhost:8000 (default port)' and on another terminal run "npm run dev" for Vite-specific development server (if you encounter this kind of error "failed to load config from....,Error: ENOENT: no such file or directory," please move the project folder to the root directory and re-type "npm run dev" again because sometime npm can get conflicted)
 
 2.Access the application in your browser by clicking the link that php artisan serve give out:eg. http://localhost:8000 (default port)
 
